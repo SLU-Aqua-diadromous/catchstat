@@ -19,9 +19,11 @@
 #' the removed columns + the "anon_id" making it possible join the removed
 #' columns back to the data if needed.
 #'
-#' @export
 #'
 #' @examples
+#' result <- anonymize("Catchdata2018.xlxs")
+#'
+#' @export
 anonymize <- function(fnam,
                       columns =  c("SIGNAL", "DISTRIKT", "BATNAMN", "PNR_DAT", "PNR_SLUT",
                                          "NAMN")) {

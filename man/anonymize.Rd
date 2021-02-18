@@ -30,3 +30,7 @@ anonymous id and one file with the personal data and the
 anon_id. If you save a file with personal data it should be stored in
 a secure location with limited access.
 }
+\examples{
+result <- anonymize("Catchdata2018.xlxs")
+
+}
