@@ -31,6 +31,10 @@ anonymize <- function(fnam,
     stop("file ", fnam, " does not exist.")
   }
   indata <- readxl::read_excel(fnam)
+  missing_cols <- columns[!(columns %in% names(indata))]
+  for (mcol in missing_cols) {
+    indata[[mcol]] <-  NA
+  }
   ## Create a data frame with all personal data concatenated as a new column
   temp_data <- indata %>%
     tidyr::unite("personal_data", tidyselect::all_of(columns), remove = FALSE)
