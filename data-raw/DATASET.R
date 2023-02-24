@@ -5,3 +5,6 @@ usethis::use_data(gear, overwrite = TRUE)
 species <- readxl::read_excel("data-raw/species.xlsx")
 usethis::use_data(species, overwrite = TRUE)
 ##
+## code to prepare 'ackflagg' dataset
+ackflagg <- readxl::read_excel("data-raw/ackflagg.xlsx")
+usethis::use_data(ackflagg, overwrite = TRUE)

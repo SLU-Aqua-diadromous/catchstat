@@ -9,9 +9,6 @@ slurp_xlxs(fnames)
 \arguments{
 \item{fnames}{Character vector with one or more file namns}
 }
-\value{
-
-}
 \description{
 Read several Excel files and return the concatenated data
 }

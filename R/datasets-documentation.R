@@ -31,3 +31,17 @@
 #' }
 "species"
 
+
+### Docs data.frame "ackflagg ############################################
+#' Code number and description
+#'
+#' A dataset with commercially fished species. Each species is
+#' described with a three character long code (MAF/FAO), english
+#' common name and swedish common name.
+#'
+#' @format A data frame with 3 variables:
+#' \describe{
+#'   \item{numeric code for fate of catch}
+#'   \item{TEXT}{Description in Swedish}
+#' }
+"ackflagg"
