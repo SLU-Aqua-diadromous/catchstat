@@ -41,7 +41,7 @@
 #'
 #' @format A data frame with 3 variables:
 #' \describe{
-#'   \item{numeric code for fate of catch}
+#'   \item{numeric}{code for fate of catch}
 #'   \item{TEXT}{Description in Swedish}
 #' }
 "ackflagg"
