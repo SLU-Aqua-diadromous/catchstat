@@ -9,6 +9,15 @@ slurp_xlxs(fnames)
 \arguments{
 \item{fnames}{Character vector with one or more file namns}
 }
+\value{
+a data frame
+}
 \description{
 Read several Excel files and return the concatenated data
+}
+\examples{
+\dontrun{
+all_data <- slurp_xlsx(c("1.xlsx", "2.xlsx"))
+}
+
 }

@@ -3,10 +3,14 @@
 #'
 #' @param fnames Character vector with one or more file namns
 #'
-#' @return
+#' @return a data frame
 #' @export
 #'
 #' @examples
+#'\dontrun{
+#' all_data <- slurp_xlsx(c("1.xlsx", "2.xlsx"))
+#'}
+#'
 slurp_xlxs <- function(fnames) {
   res <- lapply(fnames, readxl::read_xlsx) %>%
     dplyr::bind_rows()
