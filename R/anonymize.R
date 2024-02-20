@@ -9,7 +9,7 @@
 #' anon_id. If you save a file with personal data it should be stored in
 #' a secure location with limited access.
 #'
-#' @param fnam Filename of excel file to read
+#' @param x data.frame with catch data as requested from Hav
 #' @param columns Columns to anonymize and remove from output
 #'
 #' @return
@@ -21,22 +21,26 @@
 #'
 #'
 #' @examples
-#' result <- anonymize("Catchdata2018.xlxs")
+#'\dontrun{
+#' result <- anonymize(catchdata)
+#'}
 #'
 #' @export
-anonymize <- function(fnam,
+anonymize <- function(x,
                       columns =  c("SIGNAL", "DISTRIKT", "BATNAMN", "PNR_DAT", "PNR_SLUT",
                                          "NAMN")) {
-  if (!file.exists(fnam)) {
-    stop("file ", fnam, " does not exist.")
-  }
-  indata <- readxl::read_excel(fnam)
-  missing_cols <- columns[!(columns %in% names(indata))]
+  # if (!file.exists(fnam)) {
+  #   stop("file ", fnam, " does not exist.")
+  # }
+  # indata <- readxl::read_excel(fnam)
+
+  ## If we have missing columns add them with value NA
+  missing_cols <- columns[!(columns %in% names(x))]
   for (mcol in missing_cols) {
-    indata[[mcol]] <-  NA
+    x[[mcol]] <-  NA
   }
   ## Create a data frame with all personal data concatenated as a new column
-  temp_data <- indata %>%
+  temp_data <- x %>%
     tidyr::unite("personal_data", tidyselect::all_of(columns), remove = FALSE)
   ## Add column anon_id as a sha256 hash of personal_data
   vdigest <- Vectorize(digest::digest) # digest() isn't vectorized, make a vectorized version

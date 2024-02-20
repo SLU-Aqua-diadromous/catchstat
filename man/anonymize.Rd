@@ -5,12 +5,12 @@
 \title{Read Excel-file and anonymize some columns}
 \usage{
 anonymize(
-  fnam,
+  x,
   columns = c("SIGNAL", "DISTRIKT", "BATNAMN", "PNR_DAT", "PNR_SLUT", "NAMN")
 )
 }
 \arguments{
-\item{fnam}{Filename of excel file to read}
+\item{x}{data.frame with catch data as requested from Hav}
 
 \item{columns}{Columns to anonymize and remove from output}
 }
@@ -31,6 +31,8 @@ anon_id. If you save a file with personal data it should be stored in
 a secure location with limited access.
 }
 \examples{
-result <- anonymize("Catchdata2018.xlxs")
+\dontrun{
+result <- anonymize(catchdata)
+}
 
 }
