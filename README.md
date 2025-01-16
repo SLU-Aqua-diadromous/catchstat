@@ -1,10 +1,7 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 # catchstat
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
 The goal of catchstat is to provide tools and data structures that make
@@ -17,7 +14,7 @@ You can install the the development version of catchstat from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("kagervall/catchstat")
+devtools::install_github("SLU-Aqua-diadromous/catchstat")
 ```
 
 ## Example
