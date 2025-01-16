@@ -27,7 +27,7 @@ You can install the the development version of catchstat from [GitHub](https://g
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("kagervall/catchstat")
+devtools::install_github("SLU-Aqua-diadromous/catchstat")
 ```
 ## Example
 
