@@ -11,7 +11,7 @@
 #' all_data <- slurp_xlsx(c("1.xlsx", "2.xlsx"))
 #'}
 #'
-slurp_xlxs <- function(fnames) {
+slurp_xlsx <- function(fnames) {
   res <- lapply(fnames, readxl::read_xlsx) %>%
     dplyr::bind_rows()
   return(res)
