@@ -14,7 +14,7 @@ You can install the the development version of catchstat from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("SLU-Aqua-diadromous/catchstat")
+devtools::install_github("SLU-Aqua-salmonids/catchstat")
 ```
 
 ## Example
